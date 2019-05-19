@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '$'
+const prefix = '.'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -79,7 +79,7 @@ client.on('message', message => {
  message.author.sendMessage(`
  **
 ╔[❖════════════❖]╗
-                 Prefix = ' - '
+                 Prefix = ' . '
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
@@ -160,7 +160,7 @@ My Invite Link : ||||
 
 client.on('message', message => {
   if(!message.channel.guild) return;
-if (message.content.startsWith('$ping')) {
+if (message.content.startsWith('.ping')) {
 if(!message.channel.guild) return;
 var msg = `${Date.now() - message.createdTimestamp}`
 var api = `${Math.round(client.ping)}`
@@ -240,7 +240,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-                                        if (message.content === "$support") {
+                                        if (message.content === ".support") {
                                         let embed = new Discord.RichEmbed()
                                      .setAuthor(message.author.username)
                                      .setColor("#9B59B6")
@@ -291,7 +291,7 @@ client.on('message' , message => {
      var codes = args.join(' ')
        
         if(!codes) {
-          message.channel.send("Try $help")
+          message.channel.send("Try .help")
             return;
         }
      
@@ -319,7 +319,7 @@ client.on('message' , message => {
 	
 	
     client.on('message', message => {
-	    var prefix = "$";
+	    var prefix = ".";
               if(!message.channel.guild) return;
     if(message.content.startsWith(prefix + 'ebc')) {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers**').then(m => m.delete(5000));
